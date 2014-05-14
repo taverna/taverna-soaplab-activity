@@ -8,8 +8,8 @@
 	</parent>
 	<groupId>net.sf.taverna.t2.activities</groupId>
 	<artifactId>soaplab-activity</artifactId>
-	<name>Taverna 2 Soaplab Activity</name>
         <version>1.6-SNAPSHOT</version>
+	<name>Taverna 2 Soaplab Activity</name>
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.taverna.t2.core</groupId>
@@ -21,16 +21,16 @@
 			<artifactId>reference-api</artifactId>
 			<version>${t2.core.version}</version>
 		</dependency>
-       <dependency>
-            <groupId>axis</groupId>
-            <artifactId>axis</artifactId>
-            <version>${axis.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${log4j.version}</version>
-        </dependency>
+	       <dependency>
+	            <groupId>axis</groupId>
+	            <artifactId>axis</artifactId>
+	            <version>${axis.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>log4j</groupId>
+	            <artifactId>log4j</artifactId>
+	            <version>${log4j.version}</version>
+	        </dependency>
 		<dependency>
 			<groupId>net.sf.taverna.t2.activities</groupId>
 			<artifactId>activity-test-utils</artifactId>
@@ -44,5 +44,32 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+        <repositories>
+                <repository>
+                        <releases />
+                        <snapshots>
+                                <enabled>false</enabled>
+                        </snapshots>
+                        <id>mygrid-repository</id>
+                        <name>myGrid Repository</name>
+                        <url>http://www.mygrid.org.uk/maven/repository</url>
+                </repository>
+                <repository>
+                        <releases>
+                                <enabled>false</enabled>
+                        </releases>
+                        <snapshots />
+                        <id>mygrid-snapshot-repository</id>
+                        <name>myGrid Snapshot Repository</name>
+                        <url>http://www.mygrid.org.uk/maven/snapshot-repository</url>
+                </repository>
+        </repositories>
+        <scm>
+                <connection>scm:git:https://github.com/taverna/taverna-soaplab-activity.git</connection>
+                <developerConnection>scm:git:ssh://git@github.com/taverna/taverna-soaplab-activity.git</developerConnection>
+                <url>https://github.com/taverna/taverna-soaplab-activity/</url>
+                <tag>HEAD</tag>
+        </scm>
 </project>
 
